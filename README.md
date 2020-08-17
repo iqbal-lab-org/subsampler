@@ -22,17 +22,19 @@ The version used in the pandora paper has tag `pandora_paper_tag1`.
 
 1. Download sample data (TODO: add link);
 2. `unzip sample_data.zip`
-3. `bash scripts/run_pipeline_local.sh -j8`
+3. `source venv/bin/activate`
+4. `bash scripts/run_pipeline_local.sh -j8`
 
 ## Running on the paper data:
 
 1. `git checkout pandora_paper_tag1`
+2. `source venv/bin/activate`
 
 ### If you want to run local:
 
-2. `bash scripts/run_pipeline_local.sh -j <NB_OF_THREADS> --configfile config_pandora_paper_tag1.yaml`
+3. `bash scripts/run_pipeline_local.sh -j <NB_OF_THREADS> --configfile config_pandora_paper_tag1.yaml`
 
 ### If you want to run on an LSF cluster:
 
-2. `bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml`
+3. `bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml`
 
