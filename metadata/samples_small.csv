@@ -1,3 +1,3 @@
 sample_id,sample_path
-063_STEC,data/samples/063_STEC
-ST38,data/samples/ST38
+063_STEC,sample_data/samples/063_STEC
+ST38,sample_data/samples/ST38

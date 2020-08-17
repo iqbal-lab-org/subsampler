@@ -1,0 +1,7 @@
+/venv/
+/sample_data/
+/.snakemake/
+/logs/
+/output_subsampler/
+.idea/
+sample_data.zip
