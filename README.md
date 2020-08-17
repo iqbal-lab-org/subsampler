@@ -16,16 +16,13 @@ The version used in the pandora paper has tag `pandora_paper_tag1`.
 * singularity;
 
 ### Setting up virtualenv
-```
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+`./setup.sh`
 
 ## Running on the sample example:
 
-1. Download and extract sample data (TODO: add link)
-2. `bash scripts/run_pipeline_local.sh -j8`
+1. Download sample data (TODO: add link);
+2. `unzip sample_data.zip`
+3. `bash scripts/run_pipeline_local.sh -j8`
 
 ## Running on the paper data:
 
