@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ## Running on the sample example:
 
 1. Download and extract sample data (TODO: add link)
-2. `bash scripts/run_pipeline_local.sh`
+2. `bash scripts/run_pipeline_local.sh -j8`
 
 ## Running on the paper data:
 
