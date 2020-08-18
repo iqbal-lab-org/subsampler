@@ -1,25 +1,16 @@
 import pandas as pd
-
-# ======================================================
-# Config files
-# ======================================================
-configfile: "config.yaml"
-
-samples_file = config["samples"]
-samples = pd.read_csv(samples_file)
-output_dir = config["output_dir"]
-coverages = config["coverages"]
-technologies = config["technologies"]
-strategies = config["strategies"]
-mean_q_weight = config["mean_q_weight"]
-min_length = config["min_length"]
-seed = config["seed"]
-subsampler_container = config["container"]
-
+from pathlib import Path
 
 # ======================================================
 # Utility functions
 # ======================================================
+def update_to_absolute_path_core(path_series):
+    return path_series.apply(lambda path: str(Path(path).absolute()))
+def update_to_absolute_path(df, columns):
+    for column in columns:
+        df[column] = update_to_absolute_path_core(df[column])
+    return df
+
 def get_illumina_reads(samples, sample_name, first_or_second):
     assert first_or_second in [1, 2]
     assert sample_name in samples.sample_id.to_list()
@@ -36,6 +27,24 @@ def get_assembly(samples, sample_name):
     sample_path = samples[samples.sample_id == sample_name]["sample_path"].tolist()[0]
     return f"{sample_path}/{sample_name}.ref.fa"
 
+
+
+# ======================================================
+# Config files
+# ======================================================
+configfile: "config.yaml"
+
+samples_file = config["samples"]
+samples = pd.read_csv(samples_file)
+samples = update_to_absolute_path(samples, ["sample_path"])
+output_dir = config["output_dir"]
+coverages = config["coverages"]
+technologies = config["technologies"]
+strategies = config["strategies"]
+mean_q_weight = config["mean_q_weight"]
+min_length = config["min_length"]
+seed = config["seed"]
+subsampler_container = config["container"]
 
 
 
