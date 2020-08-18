@@ -55,5 +55,5 @@ ERROR: Image file exists, not overwriting.
 ```
 
 pass to the running script the default location where singularity images are store.
-For example, in the EBI cluster, it would be `--singularity-prefix /nfs/leia/singularity/leandro/`:
+For example, in the EBI cluster, it would be `--singularity-prefix /nfs/leia/singularity/leandro/`.
 
