@@ -6,8 +6,8 @@ output_dir: output_subsampler_pandora_paper_tag1
 
 # execution config
 coverages:  # to which coverages you want to subsample?
-  - 30
-  - 60
+#  - 30
+#  - 60
   - 100
 
 technologies:
@@ -15,7 +15,7 @@ technologies:
   - illumina
 
 strategies:
-  - filter  # filtlong
+#  - filter  # filtlong
   - random  # rasusa
 
 mean_q_weight: 10  # filtlong param
