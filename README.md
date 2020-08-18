@@ -13,7 +13,7 @@ The version used in the pandora paper has tag `pandora_paper_tag1`.
 
 ### Dependencies
 * python 3.6+;
-* singularity;
+* singularity 2.4.1+;
 
 ### Setting up virtualenv
 `./setup.sh`
