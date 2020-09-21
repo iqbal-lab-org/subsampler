@@ -1,0 +1,25 @@
+# input data configs
+samples: metadata/samples_pandora_paper_tag1.4way.csv
+
+# output configs
+output_dir: output_subsampler_pandora_paper_tag1_4way
+
+# execution config
+coverages:  # to which coverages you want to subsample?
+#  - 30
+#  - 60
+  - 100
+
+technologies:
+  - nanopore
+#  - illumina
+
+strategies:
+#  - filter  # filtlong
+  - random  # rasusa
+
+mean_q_weight: 10  # filtlong param
+min_length: 150    # filtlong param
+seed: 42           # filtlong and rasusa param
+
+container: docker://leandroishilima/subsampler:pandora_paper_tag1
