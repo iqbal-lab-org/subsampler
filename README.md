@@ -5,7 +5,9 @@ A snakemake subsampling pipeline for the pandora analysis pipeline. It subsample
 (random subsampling), and Illumina data based on [rasusa](https://github.com/mbhall88/rasusa) 
 (random subsampling) only.
 
-The version used in the pandora paper has tag `pandora_paper_tag1`.
+The version used in the pandora paper review has tag `pandora_paper_update_31_03_2021`.
+
+The version used in the pandora paper submission has tag `pandora_paper_tag1`.
 
 # Running
 
